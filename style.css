@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&family=Shrikhand&display=swap');
+h1,h2,p,li {
+    font-family: 'Roboto', sans-serif;
+  }
+html, body {
+    margin:0;
+    padding:0;
+}
+/*header*/
+/*logo*/
+.img-logo>img{
+    height: 30px;
+    object-fit: cover;
+}
+.img-logo{
+    text-align: center;
+    padding-top: 15px;
+}
+header {
+    padding-bottom: 10px;
+    box-shadow: 0px 0px 10px gray;
+    position: relative;
+    z-index: 10;
+}
+/*tailles des images*/
+.imgflex1 {
+    width: 300px;
+}
+
+/*section select*/
+/*barre de recherche*/
+.navsearch input {
+    border: none;
+    padding-left: 5px;
+    padding-top: 13px;
+    background-color: #DCDCDC;
+}
+.navsearch input::placeholder
+{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  color: #414040;
+}
+.navsearch form{
+    text-align: center;
+    background-color: #DCDCDC;
+    height: 40px;
+}
+.fa-map-marker-alt:before {
+    content: "\f3c5";
+    margin-left: 40px;
+    font-size: 15px;
+    color: #414040;
+}
+/*div présentation*/
+.presentation {
+    background-color: #EFEFEF;
+    padding-bottom: 50px;
+}
+#reserver {
+    margin: 0px;
+    padding-top: 25px;
+    text-align: center;
+    font-size: 1.5em;
+}
+.presentation >p {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+/*bouton explorer*/
+.text{
+    border-radius: 25px;
+    box-shadow: 4px 7px 4px #DCDCDC;
+    text-align: center;
+    font-size: 0.9em;
+    color: floralwhite;
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    font-family:'Roboto', sans-serif;
+    font-weight: 300;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 25%;
+}
+/*div fonctionnement*/
+.fonctionnement h1 {
+    font-size: 1.5em;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+.fonctionnement{
+    margin-bottom: 60px;
+}
+
+.fonctionnement li{
+    margin-bottom: 25px;
+    list-style-type: none;
+    counter-increment: fx;
+    position: relative;
+}
+.fonctionnement li::before{
+    content: counter(fx); 
+    background: #9356DC;
+    padding-right: 9px;
+    padding-left: 9px;
+    padding-bottom: 6px;
+    padding-top: 5px;
+    border-radius: 50%;
+	font-size: 0.9em;
+    color: white;
+    position: absolute;
+    left: -10px;
+    top:40%;
+    transform: translateY(-20%);		
+}
+.fonctionnement li::marker {
+    background-color: #9356DC;
+}
+
+.fonctionnement i{
+    padding-right: 15px;
+    padding-left: 15px;
+    color: gray;
+    font-size: 1.4em;
+}
+.fa-store:before {
+    content: "\f54e";
+    color: #9356DC;
+}
+
+.filtre-choice{
+    border-radius: 20px ;
+    background-color: #EFEFEF;
+    box-shadow: 5px 5px 5px #DCDCDC;
+    padding: 20px;
+    padding-right: 0px;
+    margin-right: 20px;
+    font-size: 0.9em;
+}
+
+.filtre-menu{
+    border-radius: 20px ;
+    background-color: #EFEFEF;
+    box-shadow: 5px 5px 5px #DCDCDC;
+    padding: 20px;
+    padding-right: 0px;
+    margin-right: 20px;
+    font-size: 0.9em;
+}
+.filtre-degust{
+    border-radius: 20px ;
+    background-color:  #F4EBFB;
+    box-shadow: 5px 5px 5px #DCDCDC;
+    padding: 20px;
+    padding-right: 0px;
+    margin-right: 20px;
+    font-size: 0.9em;
+}
+/*section cartes/liste restaurants*/
+.cartes {
+    background-color: #EFEFEF;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.h1-section-cartes{
+    font-size: 1.5em;
+    margin-left: 20px;
+}
+.container-cartes{
+    list-style-type: none;
+    padding-left: 20px;
+}
+/*bandeau nouveau restaurant*/
+.new{
+    display: flex;
+    position: absolute;
+    background-color: #99E2D0;
+    color:  #418e6c;
+    font-size: 0.7em;
+    margin: 10px;
+    width: 80px;
+    top: 0;
+    right: 0;
+}
+.new h2{
+    margin: 0px;
+    padding: 7px;
+    padding-left: 10px;
+    font-size: 1.3em;
+}
+.img-new{
+    display: flex;
+}
+.container-new{
+    position: relative;
+}
+.imgflex1 
+{
+  height: 170px;
+  width: 335px;
+  border-radius: 10px 10px 0px 0px;
+  object-fit: cover;
+}
+.container-cartes a{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  
+}
+.flex {
+    background-color: white;
+    box-shadow: 3px 5px 3px #DCDCDC;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    width: 335px;
+}
+.h_section_cartes{
+    padding-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 1em;
+}
+.subtitle_section_cartes{
+    font-weight: lighter;
+    padding-left: 10px;
+    font-size: 1em;
+    margin-top: 5px;
+}
+.love_section_cartes{
+    width: 40px;
+    padding-right: 15px;
+}
+.container-bandeau{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 5px;
+}
+/*logos coeurs*/
+.love-full {
+    font-size: 1.7em;
+    width: 45px;
+    /*text-shadow: #FF79DA 1px 1px, #FF79DA -1px 1px, #FF79DA -1px -1px, #FF79DA 1px -1px;*/
+    background: -webkit-linear-gradient(#9356DC,#FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-border: none;
+    position: relative;
+    opacity: 0;
+}
+
+.love-empty {
+    font-size: 1.7em;
+    width: 45px;
+    position: absolute;
+    
+}
+.love-empty2{
+    font-size: 1.7em;
+    width: 45px;
+}
+
+/*footer*/
+.logo {
+    font-family: 'Shrikhand',cursive;
+    font-weight: lighter;
+    color: floralwhite;
+    font-size: 1.3em;
+    padding-left: 20px ;
+    padding-top: 20px;
+    margin-top: 0px;
+}
+.container-footer {
+    background-color: #414040;
+} 
+.container-footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    padding-top: 0px;
+    color: floralwhite;
+    font-size: 0.9em;
+}
+.container-footer li{
+    padding-bottom: 7px;
+}
+.fa-utensils:before {
+    content: "\f2e7";
+    padding-right: 10px;
+}
+.fa-hands-helping:before {
+    content: "\f4c4";
+    padding-right: 5px;
+}
+.contacts a{
+    text-decoration: none;
+    color: white;
+}
+
+/*page la palette du goût*/
+/*header fléche renvoi à la page d'accueil*/
+
+.menu-return{
+    display: flex;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+
+}
+.container-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.fa-arrow-left:before {
+    content: "\f060";
+    color: black;
+    font-size: 1.2em;
+}
+/*section menu de la palette du goût*/
+.imgflex2{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    
+}  
+.en-tete{
+    position: absolute;
+    width: 100%;
+}
+.section-menus{
+    background-color:  #EFEFEF;
+    padding-bottom: 50px;
+    position: relative;
+    z-index: 10;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    margin-top: 210px;
+}
+.titre-menu >h1{
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+.container-menu-titre{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*div entrées*/
+.carré-vert{
+    background-color: #99E2D0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 70px;
+    font-size: 1.8em;
+    color: white;
+    text-align: center;
+    height: 100%;
+    position: absolute;
+    z-index: 30;
+    bottom: 0;
+    right: -70px;
+    /*display: none;*/
+}
+.entrées >h2 {
+    font-size: 1.1em;
+    font-weight: 300;
+    padding-left: 15px;
+    margin-bottom: 3px;
+}
+.barre{
+    height:4px;
+    background-color:#99E2D0;
+    width:40px;
+    margin-left: 15px;
+}
+.container{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 45px;
+}
+.flexentrées{
+    background-color: white;
+    list-style: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+.container-entrées{
+    display: block;
+    padding-left: 10px;
+}
+.container-entrées >p{
+    margin: 10px;
+    margin-left: 0px;
+    margin-top: 0px;
+    font-size: 1em;
+    font-weight: 300;
+}
+.container-entrées >h2{
+    margin: 10px;
+    margin-left: 0px;
+    font-size: 1.2em;
+    margin-bottom: 3px;
+}
+.flex-price >h3{
+    margin: 10px;
+    font-size: 0.9em;
+}
+/*div plats*/
+
+.plats >h2 {
+    font-size: 1.1em;
+    font-weight: 300;
+    padding-left: 15px;
+    margin-bottom: 3px;
+}
+.flexplats{
+    background-color: white;
+    list-style: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+.container-plat{
+    display: block;
+    padding-left: 10px;
+}
+.container-plat >p{
+    margin: 10px;
+    margin-left: 0px;
+    font-size: 1em;
+    font-weight: 300;
+    margin-top: 0px;
+}
+.container-plat >h2{
+    margin: 10px;
+    margin-left: 0px;
+    font-size: 1.2em;
+    margin-bottom: 3px;
+}
+
+/*div desserts*/
+.desserts >h2 {
+    font-size: 1.2em;
+    font-weight: 300;
+    padding-left: 15px;
+    margin-bottom: 3px;
+}
+.flexdesserts{
+    background-color: white;
+    list-style: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+/*bouton order*/
+.text1{
+    border-radius: 25px;
+    box-shadow: 4px 7px 4px #DCDCDC;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 300;
+    color: floralwhite;
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    font-family:'Roboto', sans-serif;
+    padding: 15px;
+    width: 160px;
+    margin-left: 25%;
+    margin-top: 40px;
+}
+
+/* Animations CSS */
+
+/* sauvegarde des menus avec bouton j'aime */
+.love-empty:hover{
+    overflow: hidden;
+}
+.love-full:hover{
+    opacity: 3;
+}
+/*page loader*/
+
+/*apparition du menu au fur et à mesure*/
+.flexentrées {
+    animation: slidein 3s;
+}
+.flexplats{
+    animation: slidein 3s;
+}
+.flexdesserts {
+    animation: slidein 3s;
+}
+
+/*@keyframes slidein {
+    0% {
+        opacity: 0.5;
+        margin-top: 12%;
+    }
+    50% {
+        opacity: 0.8;
+        margin-top: 5%;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0%;
+    }
+}*/
+@keyframes slidein {
+    from {
+        opacity: 0;
+        margin-top: 12%;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0%;
+    }
+}
+/*apparition du check à gauche des vignettes de présentation des plats*/
+
+.carré-vert:hover {
+    right: 0;
+    transition: 1500ms;
+}
+.check {
+    animation: anim-rotate 2s infinite;
+    padding-top: 20px;
+}
+a.button {
+    display: flex;
+    position: relative;
+    width: 100%;
+    /*transition-delay: 70ms;
+    transition-property: all;
+    animation:  2s ease;*/
+}
+
+@keyframes anim-rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    30%{
+        transform: rotate(80deg);
+    }
+    60%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
