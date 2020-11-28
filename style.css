@@ -387,25 +387,30 @@ header {
     margin-bottom: 15px;
 }
 .container-entrées{
-    display: block;
+    display: flex;
     padding-left: 10px;
 }
-.container-entrées >p{
+.titles-start >p{
     margin: 10px;
     margin-left: 0px;
     margin-top: 0px;
+    margin-right: 0;
     font-size: 1em;
     font-weight: 300;
 }
-.container-entrées >h2{
+.titles-start >h2 {
     margin: 10px;
     margin-left: 0px;
     font-size: 1.2em;
     margin-bottom: 3px;
 }
+.titles-start {
+    width: 300px;
+}
 .flex-price{
     display: flex;
     align-items: flex-end;
+    
 }
 .flex-price >h3{
     margin: 10px;
@@ -511,9 +516,10 @@ header {
 }
 /*apparition du check à gauche des vignettes de présentation des plats*/
 .check {
-    animation: anim-rotate 2s;
+    animation: anim-rotate 0.5s 300ms linear;
+    /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
     transform-origin: center;
-    padding-top: 20px;
+    text-align: center;
 }
 
 a.button {
@@ -527,38 +533,85 @@ a.button .carré-vert{
     background-color: #99E2D0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    width: 70px;
+    width: 80px;
     font-size: 1.8em;
     color: white;
     text-align: center;
     height: 100%;
     position: absolute;
-    z-index: 30;
+    z-index: 10;
     right: -80px;
 }
 a.button:hover .carré-vert {
     display: block;
     right: 0;
-    transition-duration: 4s ease;
+    animation: slide 1s ease-out;
 }
 a.button:hover p {
     text-overflow: ellipsis;
     white-space: nowrap; 
 }
 @keyframes anim-rotate{
-    to {
+    from {
         transform: rotate(0deg);
     }
-    from {
+    to {
         transform: rotate(360deg);
+    }
+}
+@keyframes slide {
+    from{
+        opacity: 0.9;
+        margin-right: -80px;
+    }
+    to {
+        opacity: 1;
+        margin-right: 0px;
     }
 }
 
 /*loader*/
 #loader {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    z-index: 100;
 
+    /*création cercle*/
+
+    border-top: 15px solid #DCDCDC;
+    border-right: 15px solid #9356DC;
+    border-bottom: 15px solid #FF79DA;
+    border-left: 15px solid #99E2D0;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+
+    /*placement au mileu de la page*/
+
+    margin: auto;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
 }
+    /*animation loader*/
 
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    /*titre site avec ... si on peut mettre quelque chose dans le loader
+.titre-site{
+  top: 0; bottom: 0; left: 0; right: 0;
+  text-align: center;
+  padding-top: 50px;
+}*/
+  
+
+  
 
 
 
