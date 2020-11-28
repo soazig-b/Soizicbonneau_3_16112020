@@ -85,6 +85,10 @@ header {
     padding-right: 20px;
     margin-left: 25%;
 }
+.text:hover{
+    opacity: 0.7;
+    box-shadow: 6px 9px 6px gray;
+}
 /*div fonctionnement*/
 .fonctionnement h1 {
     font-size: 1.5em;
@@ -249,20 +253,21 @@ header {
     background: -webkit-linear-gradient(#9356DC,#FF79DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-border: none;
     position: relative;
     opacity: 0;
 }
-
 .love-empty {
     font-size: 1.7em;
     width: 45px;
     position: absolute;
-    
 }
 .love-empty2{
     font-size: 1.7em;
     width: 45px;
+}
+.text1:hover{
+    opacity: 0.7;
+    box-shadow: 6px 9px 6px gray;
 }
 
 /*footer*/
@@ -354,21 +359,7 @@ header {
 }
 
 /*div entrées*/
-.carré-vert{
-    background-color: #99E2D0;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    width: 70px;
-    font-size: 1.8em;
-    color: white;
-    text-align: center;
-    height: 100%;
-    position: absolute;
-    z-index: 30;
-    bottom: 0;
-    right: -70px;
-    /*display: none;*/
-}
+
 .entrées >h2 {
     font-size: 1.1em;
     font-weight: 300;
@@ -411,6 +402,10 @@ header {
     margin-left: 0px;
     font-size: 1.2em;
     margin-bottom: 3px;
+}
+.flex-price{
+    display: flex;
+    align-items: flex-end;
 }
 .flex-price >h3{
     margin: 10px;
@@ -504,21 +499,6 @@ header {
 .flexdesserts {
     animation: slidein 3s;
 }
-
-/*@keyframes slidein {
-    0% {
-        opacity: 0.5;
-        margin-top: 12%;
-    }
-    50% {
-        opacity: 0.8;
-        margin-top: 5%;
-    }
-    100%{
-        opacity: 1;
-        margin-top: 0%;
-    }
-}*/
 @keyframes slidein {
     from {
         opacity: 0;
@@ -530,37 +510,53 @@ header {
     }
 }
 /*apparition du check à gauche des vignettes de présentation des plats*/
-
-.carré-vert:hover {
-    right: 0;
-    transition: 1500ms;
-}
 .check {
-    animation: anim-rotate 2s infinite;
+    animation: anim-rotate 2s;
+    transform-origin: center;
     padding-top: 20px;
 }
+
 a.button {
     display: flex;
     position: relative;
     width: 100%;
-    /*transition-delay: 70ms;
-    transition-property: all;
-    animation:  2s ease;*/
 }
 
+a.button .carré-vert{
+    display: none;
+    background-color: #99E2D0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 70px;
+    font-size: 1.8em;
+    color: white;
+    text-align: center;
+    height: 100%;
+    position: absolute;
+    z-index: 30;
+    right: -80px;
+}
+a.button:hover .carré-vert {
+    display: block;
+    right: 0;
+    transition-duration: 4s ease;
+}
+a.button:hover p {
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}
 @keyframes anim-rotate{
-    0%{
+    to {
         transform: rotate(0deg);
     }
-    30%{
-        transform: rotate(80deg);
-    }
-    60%{
-        transform: rotate(180deg);
-    }
-    100%{
+    from {
         transform: rotate(360deg);
     }
+}
+
+/*loader*/
+#loader {
+
 }
 
 
