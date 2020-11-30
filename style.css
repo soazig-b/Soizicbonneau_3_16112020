@@ -2,7 +2,7 @@
 h1,h2,p,li {
     font-family: 'Roboto', sans-serif;
   }
-  /*tailles des images*/
+/*tailles des images*/
 .imgflex1 {
     width: 300px;
 }
@@ -63,9 +63,11 @@ header {
 }
 #reserver {
     margin: 0px;
+    margin-left: 35px;
     padding-top: 25px;
     text-align: center;
     font-size: 1.5em;
+    width: 300px;
 }
 .presentation >p {
     text-align: center;
@@ -73,6 +75,8 @@ header {
     font-weight: 300;
     margin-top: 10px;
     margin-bottom: 40px;
+    margin-left: 35px;
+    width: 300px;
 }
 /*bouton explorer*/
 .text{
@@ -189,8 +193,6 @@ header {
 .container-cartes a{
     text-decoration: none;
     color: black;
-    display: flex;
-    flex-direction: column;
 }
 .imgflex1 
 {
@@ -642,7 +644,177 @@ a.button:hover p {
         transform: rotate(360deg);
     }
 
-*/
+    */
+/*responsive*/
+/*tablet*/
+@media all and (min-width: 768px)
+{
+    /*pages d'accueil*/
+    .img-logo{
+        text-align: left;
+        margin-left: 30px;
+        
+    }
+    .img-logo >img{
+        height: 35px;
+    }
+    .navsearch form{
+        height: 70px;
+    }
+    .navsearch input{
+        padding-top: 30px;
+    }
+    #reserver {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .presentation >p{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .text{
+        margin-left: 37%;
+        width: 200px;
+    }
+    .fonctionnement h1 {
+        margin-left: 6%;
+    }
+    .fonctionnement li {
+        width: 400px;
+        margin-left: 18%;
+    }
+    .container-cartes {
+        padding-top: 30px;
+    }
+    .h1-section-cartes {
+        margin-left: 6%;
+    }
+    .container-cartes >li{
+        width: 600px;
+        margin-left: 50px;
+        margin-bottom: 40px;
+    }
+    .imgflex1 {
+        width: 100%;
+    }
+    .container-footer li{
+        display: inline-block;
+        padding-right: 50px;
+    }
+    .container-footer ul{
+        padding-left: 50px;
+    }
+    .logo {
+        margin-left: 20px;
+    }
+    /*pages des menus*/
+    .container-menu-titre {
+        justify-content: space-between;
+        width: 90%;
+        margin-left: 40px;
+    }
+    .entrées >h2{
+        margin-left: 30px;
+    }
+    .barre{
+        margin-left: 45px;
+    }
+    .flexentrées {
+        width: 80%;
+        margin-left: 50px;
+    }
+    .plats >h2{
+        margin-left: 30px;
+    }
+
+    .flexplats {
+        width: 80%;
+        margin-left: 50px;
+    }
+    .desserts >h2{
+        margin-left: 30px;
+    }
+    .flexdesserts {
+        width: 80%;
+        margin-left: 50px;
+    }
+    .titles-start{
+        width: 520px;
+    }
+    .text1{
+        margin-left: 35%;
+    }
+}
+
+/* laptop 1440*/
+@media (min-width: 1224px)
+{
+    header{
+        box-shadow: none;
+    }
+    .img-logo{
+        text-align: left;
+        margin-left: 30px;
+        
+    }
+    .img-logo >img{
+        height: 45px;
+    }
+    .navsearch form{
+        width: 50%;
+        height: 50px;
+        margin-left: 25%;
+        border-radius: 15px;
+        margin-bottom: 30px;
+    }
+    .navsearch input{
+        padding-top: 20px;
+    }
+    .text{
+        margin-left: 44%;
+    }
+    .fonctionnement h1{
+        margin-left: 30px;
+        font-size: 2.1em;
+    }
+    
+    .fonctionnement li{
+        display: inline-flex;
+        margin-left: 60px;
+        margin-right: 60px;
+        width: 300px;
+    }
+    .h1-section-cartes{
+        margin-left: 30px;
+        font-size: 2.1em;
+    }
+    .container-cartes {
+        display: flex;
+        padding-left: 0px;
+        padding-right: 30px;
+    }
+    .container-cartes li{
+        margin-left: 20px;
+    }
+    .container-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    .container-footer ul{
+        display: contents;
+    }
+    .container-footer li{
+        padding-top: 35px;
+    }
+    .logo {
+        font-size: 2.1em;
+        margin-right: 50px;
+        margin-left: 20px;
+    }
+
+   
+
+}
 
 
 
