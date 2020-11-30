@@ -2,33 +2,46 @@
 h1,h2,p,li {
     font-family: 'Roboto', sans-serif;
   }
+  /*tailles des images*/
+.imgflex1 {
+    width: 300px;
+}
 html, body {
     margin:0;
     padding:0;
 }
+/*emplacement loader*/
+
 /*header*/
 /*logo*/
-.img-logo>img{
-    height: 30px;
-    object-fit: cover;
-}
-.img-logo{
-    text-align: center;
-    padding-top: 15px;
-}
 header {
     padding-bottom: 10px;
     box-shadow: 0px 0px 10px gray;
     position: relative;
     z-index: 10;
 }
-/*tailles des images*/
-.imgflex1 {
-    width: 300px;
+.img-logo{
+    text-align: center;
+    padding-top: 15px;
+}
+.img-logo>img{
+    height: 30px;
+    object-fit: cover;
 }
 
 /*section select*/
 /*barre de recherche*/
+.navsearch form{
+    text-align: center;
+    background-color: #DCDCDC;
+    height: 40px;
+}
+.fa-map-marker-alt:before {
+    content: "\f3c5";
+    margin-left: 40px;
+    font-size: 15px;
+    color: #414040;
+}
 .navsearch input {
     border: none;
     padding-left: 5px;
@@ -41,17 +54,8 @@ header {
   font-size: 1.2em;
   color: #414040;
 }
-.navsearch form{
-    text-align: center;
-    background-color: #DCDCDC;
-    height: 40px;
-}
-.fa-map-marker-alt:before {
-    content: "\f3c5";
-    margin-left: 40px;
-    font-size: 15px;
-    color: #414040;
-}
+
+
 /*div présentation*/
 .presentation {
     background-color: #EFEFEF;
@@ -90,15 +94,14 @@ header {
     box-shadow: 6px 9px 6px gray;
 }
 /*div fonctionnement*/
+.fonctionnement{
+    margin-bottom: 60px;
+}
 .fonctionnement h1 {
     font-size: 1.5em;
     margin-left: 20px;
     margin-top: 40px;
 }
-.fonctionnement{
-    margin-bottom: 60px;
-}
-
 .fonctionnement li{
     margin-bottom: 25px;
     list-style-type: none;
@@ -123,18 +126,14 @@ header {
 .fonctionnement li::marker {
     background-color: #9356DC;
 }
-
 .fonctionnement i{
     padding-right: 15px;
     padding-left: 15px;
     color: gray;
     font-size: 1.4em;
 }
-.fa-store:before {
-    content: "\f54e";
-    color: #9356DC;
-}
 
+/*filtres fonctionnement*/
 .filtre-choice{
     border-radius: 20px ;
     background-color: #EFEFEF;
@@ -144,7 +143,6 @@ header {
     margin-right: 20px;
     font-size: 0.9em;
 }
-
 .filtre-menu{
     border-radius: 20px ;
     background-color: #EFEFEF;
@@ -163,6 +161,10 @@ header {
     margin-right: 20px;
     font-size: 0.9em;
 }
+.fa-store:before {
+    content: "\f54e";
+    color: #9356DC;
+}
 /*section cartes/liste restaurants*/
 .cartes {
     background-color: #EFEFEF;
@@ -177,6 +179,27 @@ header {
     list-style-type: none;
     padding-left: 20px;
 }
+.flex {
+    background-color: white;
+    box-shadow: 3px 5px 3px #DCDCDC;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    width: 335px;
+}
+.container-cartes a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+.imgflex1 
+{
+  height: 170px;
+  width: 335px;
+  border-radius: 10px 10px 0px 0px;
+  object-fit: cover;
+}
+
 /*bandeau nouveau restaurant*/
 .new{
     display: flex;
@@ -201,26 +224,14 @@ header {
 .container-new{
     position: relative;
 }
-.imgflex1 
-{
-  height: 170px;
-  width: 335px;
-  border-radius: 10px 10px 0px 0px;
-  object-fit: cover;
-}
-.container-cartes a{
-  text-decoration: none;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  
-}
-.flex {
-    background-color: white;
-    box-shadow: 3px 5px 3px #DCDCDC;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    width: 335px;
+
+/* titres h2 et h3 section cartes*/
+.container-bandeau{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 5px;
 }
 .h_section_cartes{
     padding-left: 10px;
@@ -238,14 +249,8 @@ header {
     width: 40px;
     padding-right: 15px;
 }
-.container-bandeau{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding-left: 5px;
-}
-/*logos coeurs*/
+
+/*logos coeurs dans section cartes*/
 .love-full {
     font-size: 1.7em;
     width: 45px;
@@ -265,12 +270,11 @@ header {
     font-size: 1.7em;
     width: 45px;
 }
-.text1:hover{
-    opacity: 0.7;
-    box-shadow: 6px 9px 6px gray;
-}
 
 /*footer*/
+.container-footer {
+    background-color: #414040;
+} 
 .logo {
     font-family: 'Shrikhand',cursive;
     font-weight: lighter;
@@ -280,9 +284,6 @@ header {
     padding-top: 20px;
     margin-top: 0px;
 }
-.container-footer {
-    background-color: #414040;
-} 
 .container-footer ul{
     list-style-type: none;
     margin: 0;
@@ -307,37 +308,37 @@ header {
     color: white;
 }
 
-/*page la palette du goût*/
-/*header fléche renvoi à la page d'accueil*/
+/*pages des 4 menus: la palette du goût, délice des sens,
+à la française, la note enchantée*/
 
+.container-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/*header fléche renvoi à la page d'accueil*/
 .menu-return{
     display: flex;
     position: absolute;
     top: 20px;
     left: 15px;
-
-}
-.container-head{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
 .fa-arrow-left:before {
     content: "\f060";
     color: black;
     font-size: 1.2em;
 }
-/*section menu de la palette du goût*/
+/*section menus*/
+.en-tete{
+    position: absolute;
+    width: 100%;
+}
 .imgflex2{
     height: 250px;
     width: 100%;
     object-fit: cover;
     
 }  
-.en-tete{
-    position: absolute;
-    width: 100%;
-}
 .section-menus{
     background-color:  #EFEFEF;
     padding-bottom: 50px;
@@ -347,19 +348,18 @@ header {
     border-top-right-radius: 40px;
     margin-top: 210px;
 }
-.titre-menu >h1{
-    font-family: 'Shrikhand', cursive;
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
 .container-menu-titre{
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
+.titre-menu >h1{
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
 
 /*div entrées*/
-
 .entrées >h2 {
     font-size: 1.1em;
     font-weight: 300;
@@ -390,6 +390,15 @@ header {
     display: flex;
     padding-left: 10px;
 }
+.titles-start {
+    width: 300px;
+}
+.titles-start >h2 {
+    margin: 10px;
+    margin-left: 0px;
+    font-size: 1.2em;
+    margin-bottom: 3px;
+}
 .titles-start >p{
     margin: 10px;
     margin-left: 0px;
@@ -398,26 +407,15 @@ header {
     font-size: 1em;
     font-weight: 300;
 }
-.titles-start >h2 {
-    margin: 10px;
-    margin-left: 0px;
-    font-size: 1.2em;
-    margin-bottom: 3px;
-}
-.titles-start {
-    width: 300px;
-}
 .flex-price{
     display: flex;
     align-items: flex-end;
-    
 }
 .flex-price >h3{
     margin: 10px;
     font-size: 0.9em;
 }
 /*div plats*/
-
 .plats >h2 {
     font-size: 1.1em;
     font-weight: 300;
@@ -432,23 +430,6 @@ header {
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 15px;
-}
-.container-plat{
-    display: block;
-    padding-left: 10px;
-}
-.container-plat >p{
-    margin: 10px;
-    margin-left: 0px;
-    font-size: 1em;
-    font-weight: 300;
-    margin-top: 0px;
-}
-.container-plat >h2{
-    margin: 10px;
-    margin-left: 0px;
-    font-size: 1.2em;
-    margin-bottom: 3px;
 }
 
 /*div desserts*/
@@ -482,9 +463,13 @@ header {
     margin-left: 25%;
     margin-top: 40px;
 }
+/* bouton order hover*/
+.text1:hover{
+    opacity: 0.7;
+    box-shadow: 6px 9px 6px gray;
+}
 
 /* Animations CSS */
-
 /* sauvegarde des menus avec bouton j'aime */
 .love-empty:hover{
     overflow: hidden;
@@ -492,7 +477,6 @@ header {
 .love-full:hover{
     opacity: 3;
 }
-/*page loader*/
 
 /*apparition du menu au fur et à mesure*/
 .flexentrées {
@@ -514,6 +498,7 @@ header {
         margin-top: 0%;
     }
 }
+
 /*apparition du check à gauche des vignettes de présentation des plats*/
 .check {
     animation: anim-rotate 0.5s 300ms linear;
@@ -521,13 +506,11 @@ header {
     transform-origin: center;
     text-align: center;
 }
-
 a.button {
     display: flex;
     position: relative;
     width: 100%;
 }
-
 a.button .carré-vert{
     display: none;
     background-color: #99E2D0;
@@ -569,9 +552,9 @@ a.button:hover p {
         margin-right: 0px;
     }
 }
-
-/*loader*/
-#loader {
+/*création loader*/
+/*loader première idée*/
+/*#loader {
     width: 200px;
     height: 200px;
     background-color: white;
@@ -579,29 +562,29 @@ a.button:hover p {
 
     /*création cercle*/
 
-    border-top: 15px solid #DCDCDC;
+    /*border-top: 15px solid #DCDCDC;
     border-right: 15px solid #9356DC;
     border-bottom: 15px solid #FF79DA;
     border-left: 15px solid #99E2D0;
     border-radius: 50%;
-    animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;*/
 
     /*placement au mileu de la page*/
 
-    margin: auto;
+    /*margin: auto;
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
-}
+}*/
     /*animation loader*/
 
-    @keyframes spin {
+    /*@keyframes spin {
         0% {
             transform: rotate(0deg);
         }
         100% {
             transform: rotate(360deg);
         }
-    }
+    }*/
 
     /*titre site avec ... si on peut mettre quelque chose dans le loader
 .titre-site{
@@ -609,9 +592,57 @@ a.button:hover p {
   text-align: center;
   padding-top: 50px;
 }*/
-  
 
-  
+/*loader deuxième idée
+.loader-chargement{
+    widht: ;
+    height: ;
+    display: ;
+    position: ;
+    vertical-align: ;
+    font-size: ;
+}
+#loader {
+    background-color: white;
+    height: 100%;
+    widht: 100%;
+    position: fixe;
+}
+.loader-circles {
+    border-radius: 50px;
+    border: 3px solid # ;
+    border-top-color: # ;
+    animation: spin 1s linear infinite;
+}
+.loader-circles:after{
+    content: '';
+    position: absolute;
+    top: 5px; left: 5px; right: 5px; bottom: 5px;
+    border-radius: 50px;
+    border: 3px solid # ;
+    border-top-color: # ;
+    opacity: 0.8;
+    animation: spin 5s linear infinite;
+}
+.loader-circles:before{
+    content: '';
+    position: absolute;
+    top: 12px; left: 12px; right: 12px; bottom: 12px;
+    border-radius: 50px;
+    border: 3px solid # ;
+    border-top-color: # ;
+    opacity: 0.5;
+    animation: spin 10s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+*/
 
 
 
