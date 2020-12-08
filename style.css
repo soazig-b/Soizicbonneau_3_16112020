@@ -411,9 +411,10 @@ header {
 .container-entres{
     display: flex;
     padding-left: 10px;
+    width: auto;
 }
 .titles-start {
-    width: 300px;
+    min-width: 300px;
 }
 .titles-start >h2 {
     margin: 10px;
@@ -559,10 +560,18 @@ a.button:hover .carre-vert {
 a.button:hover .carre-vert .check{
     transform: rotate(360deg);
 }
-a.button:hover p {
+
+a.button:hover .titles-start {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap; 
+    
 }
+a.button:hover .flex-price {
+    transform: translateX(-80px);
+}
+
 @keyframes anim-rotate{
     from {
         transform: rotate(0deg);
@@ -582,57 +591,76 @@ a.button:hover p {
     }
 }
 /*création loader*/
-/*loader première idée*/
-/*#loader {
-    width: 200px;
-    height: 200px;
-    background-color: white;
-    z-index: 100;
-
-    /*création cercle*/
-
-    /*border-top: 15px solid #DCDCDC;
-    border-right: 15px solid #9356DC;
-    border-bottom: 15px solid #FF79DA;
-    border-left: 15px solid #99E2D0;
-    border-radius: 50%;
-    animation: spin 2s linear infinite;*/
-
-    /*placement au mileu de la page*/
-
-    /*margin: auto;
-    position: absolute;
-    top: 0; bottom: 0; left: 0; right: 0;
-}*/
-    /*animation loader*/
-
-    /*@keyframes spin {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
-    }*/
-
-    /*titre site avec ... si on peut mettre quelque chose dans le loader
-.titre-site{
-  top: 0; bottom: 0; left: 0; right: 0;
-  text-align: center;
-  padding-top: 50px;
-}*/
-
-/*loader deuxième idée*/
-/*#loader{
+#loader{
     width: 100%;
     height: 100%;
-    background-color: white;
+    background-color: #DCDCDC;
     position: fixed;
     z-index: 1000;
     top: 0;
     left: 0;
-    animation: blanc 2s forwards;
+    animation: blanc 5s forwards;
 }
+.loader-centre {
+  position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#loader h1  {
+    font-size: 1.1em;
+    font-family: 'Roboto', sans-serif;
+    transform: translateX(80px);
+    
+}
+/*création cercle*/
+.loader-circles {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    border-top-color: #99E2D0;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+.loader-circles:after {
+    content: '';
+    position: absolute;
+    top: 5px; left: 5px; right: 5px; bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color:  #FF79DA;
+    opacity: 0.7;
+    animation: spin 4s linear infinite;
+}
+.loader-circles:before{
+    content: '';
+    position: absolute;
+    top: 12px; left: 12px; right: 12px; bottom: 12px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9356DC;
+    opacity: 0.6;
+    animation: spin 8s linear infinite;
+}
+/* petits points après titre*/
+.loader-chargement:after {
+    position: fixed;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    animation: ellipsis steps(4,end) 900ms infinite;
+    content: "\2026"; 
+    width: 0px;
+  }
+  
+  @keyframes ellipsis {
+    to {
+      width: 1.25em;    
+    }
+  }
+
+/*anim apparition et disparition loader*/
 @keyframes blanc {
     0% {
         opacity: 1;
@@ -655,54 +683,25 @@ a.button:hover p {
         width: 0%;
     }
 }
-
-.loader-chargement{
-    widht: ;
-    height: ;
-    display: ;
-    position: ;
-    vertical-align: ;
-    font-size: ;
-}
-
-.loader-circles {
-    border-radius: 50px;
-    border: 3px solid # ;
-    border-top-color: # ;
-    animation: spin 1s linear infinite;
-}
-.loader-circles:after{
-    content: '';
-    position: absolute;
-    top: 5px; left: 5px; right: 5px; bottom: 5px;
-    border-radius: 50px;
-    border: 3px solid # ;
-    border-top-color: # ;
-    opacity: 0.8;
-    animation: spin 5s linear infinite;
-}
-.loader-circles:before{
-    content: '';
-    position: absolute;
-    top: 12px; left: 12px; right: 12px; bottom: 12px;
-    border-radius: 50px;
-    border: 3px solid # ;
-    border-top-color: # ;
-    opacity: 0.5;
-    animation: spin 10s linear infinite;
-}
-@keyframes spin {
-    0% {
-        transform: rotate(0deg)
+    /*animation loader*/
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
     }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-*/
-   
+    
 /*responsive*/
 /*tablet*/
+@media (max-width:425px)
+{
+  .loader-centre {
+    width: 100%;
+    margin-left: 40px;
+  }
+}
 @media all and (min-width: 768px)
 {
     /*pages d'accueil*/
