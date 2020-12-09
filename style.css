@@ -64,7 +64,7 @@ header {
     justify-content: center;
     align-items: center;
 }
-.presentation h1{
+.presentation h2{
     margin: 0px;
     margin-left: 35px;
     padding-top: 25px;
@@ -372,7 +372,7 @@ header {
     align-items: center;
     justify-content: space-around;
 }
-.titre-menu >h1{
+.titre-menu >h2{
     font-family: 'Shrikhand', cursive;
     font-size: 1.8em;
     margin-bottom: 10px;
@@ -395,23 +395,16 @@ header {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 45px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .flexentres{
     background-color: white;
     list-style: none;
     border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
     margin-bottom: 15px;
 }
 .container-entres{
     display: flex;
     padding-left: 10px;
-    width: auto;
 }
 .titles-start {
     min-width: 300px;
@@ -449,9 +442,6 @@ header {
     background-color: white;
     list-style: none;
     border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
     margin-bottom: 15px;
 }
 
@@ -466,9 +456,6 @@ header {
     background-color: white;
     list-style: none;
     border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
     margin-bottom: 15px;
 }
 /*bouton order*/
@@ -534,7 +521,7 @@ header {
 a.button {
     display: flex;
     position: relative;
-    width: 100%;
+    align-items: center;
     overflow: hidden;
 }
 a.button .carre-vert{
@@ -560,16 +547,23 @@ a.button:hover .carre-vert {
 a.button:hover .carre-vert .check{
     transform: rotate(360deg);
 }
+a.button:hover .titles-start >p{
+  width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
-a.button:hover .titles-start {
-    width: 150px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    
+a.button:hover .titles-start >h2{
+  width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
 }
 a.button:hover .flex-price {
     transform: translateX(-80px);
+    white-space: nowrap;
 }
 
 @keyframes anim-rotate{
@@ -719,7 +713,7 @@ a.button:hover .flex-price {
     .navsearch input{
         padding-top: 30px;
     }
-    .presentation h1 {
+    .presentation h2 {
         width: 100%;
         margin-left: 0px;
         font-size: 1.5em;
@@ -785,32 +779,37 @@ a.button:hover .flex-price {
         margin-left: 40px;
     }
     .entres >h2{
-        margin-left: 30px;
+        margin-left: 20%;
     }
     .barre{
-        margin-left: 45px;
+        margin-left: 22%;
+    }
+    .container{
+      display: flex; 
+      flex-direction: column; 
+      align-items: center;
     }
     .flexentres {
-        width: 80%;
+        width: 60%;
         margin-left: 50px;
     }
     .plats >h2{
-        margin-left: 30px;
+        margin-left: 20%;
     }
 
     .flexplats {
-        width: 80%;
+        width: 60%;
         margin-left: 50px;
     }
     .desserts >h2{
-        margin-left: 30px;
+        margin-left: 20%;
     }
     .flexdesserts {
-        width: 80%;
+        width: 60%;
         margin-left: 50px;
     }
     .titles-start{
-        width: 520px;
+        width: 390px;
     }
     .text1{
         margin-left: 40%;
@@ -841,7 +840,7 @@ a.button:hover .flex-price {
     .navsearch input{
         padding-top: 20px;
     }
-    .presentation h1 {
+    .presentation h2 {
         font-size: 2em;
     }
     .presentation >p{
@@ -894,6 +893,18 @@ a.button:hover .flex-price {
     /*pages des menus*/
     .container-menu-titre{
         width: 95%;
+    }
+    .entres >h2{
+        margin-left: 3%;
+    }
+    .barre{
+        margin-left: 4%;
+    }
+    .plats >h2{
+        margin-left: 3%;
+    }
+    .desserts >h2{
+        margin-left: 3%;
     }
     .container{
         flex-direction: inherit;
