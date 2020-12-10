@@ -271,13 +271,16 @@ header {
 .love-full {
     font-size: 1.7em;
     width: 45px;
-    /*text-shadow: #FF79DA 1px 1px, #FF79DA -1px 1px, #FF79DA -1px -1px, #FF79DA 1px -1px;*/
-    background: -webkit-linear-gradient(#9356DC,#FF79DA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     position: absolute;
     z-index: 30;
     opacity: 0;
+}
+.love-full >i{
+    background-image: -moz-linear-gradient(90deg, #FF79DA 38%, #9356DC 100%);
+    background-image: -webkit-linear-gradient(90deg, #FF79DA 38%, #9356DC 100%);
+    background-image: linear-gradient(90deg, #FF79DA 38%, #9356DC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .love-empty {
     font-size: 1.7em;
@@ -482,9 +485,7 @@ header {
 
 /* Animations CSS */
 /* sauvegarde des menus avec bouton j'aime */
-.love-empty:hover{
-    overflow: hidden;
-}
+
 .love-full:hover{
     opacity: 1;
 }
@@ -502,7 +503,7 @@ header {
 .flexdesserts {
     animation: slidein 3s;
 }
-@keyframes slidein {
+@keyframes slidein {                                             
     from {
         opacity: 0;
         margin-top: 12%;
@@ -593,7 +594,7 @@ a.button:hover .flex-price {
     z-index: 1000;
     top: 0;
     left: 0;
-    animation: blanc 5s forwards;
+    animation: blanc 3s forwards;
 }
 .loader-centre {
   position: fixed;
@@ -908,9 +909,11 @@ a.button:hover .flex-price {
     }
     .container{
         flex-direction: inherit;
+        flex-wrap: wrap;
     }
     .flexentres{
         width: 400px;
+        
     }
     .flexplats{
         width: 400px;
